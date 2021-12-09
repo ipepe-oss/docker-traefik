@@ -34,6 +34,7 @@ services:
       - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen to the Docker events
+      - ./data:/data # for amce.json - to cache ssl certs
 
 ```
 
