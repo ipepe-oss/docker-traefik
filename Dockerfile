@@ -10,3 +10,4 @@ FROM traefik:v1.7-alpine
 MAINTAINER docker@ipepe.pl
 COPY --from=openssl /opt/traefik/certs/ /opt/traefik/certs/
 ADD traefik.toml /traefik.toml
+RUN mkdir /data && touch /data/acme.json && chmod 600 /data/amce.json
