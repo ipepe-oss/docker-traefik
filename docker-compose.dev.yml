@@ -4,7 +4,7 @@ services:
     build: .
     restart: always
     network_mode: bridge
-    command: --acme.email="letsencrypt@example.org"
+    command: --acme.email="letsencrypt@example.org" --metrics.prometheus
     ports:
       - "80:80"
       - "443:443"
