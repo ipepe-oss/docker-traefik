@@ -53,3 +53,10 @@ services:
       - 'traefik.port=8080'
       - 'traefik.frontend.rule=Host:swagger.example.org,secondhost.example.org'
 ```
+
+
+# Generating `certs/` 
+
+```bash
+openssl req -x509 -newkey rsa:4096 -keyout ./certs/default.key -out ./certs/default.crt -days 2048 -subj '/CN=localhost' -nodes
+```

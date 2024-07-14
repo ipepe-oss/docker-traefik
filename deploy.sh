@@ -1,7 +1,5 @@
 #!/bin/bash
 
+set -e
 
-docker build . -t ipepe/traefik
-docker build . -t ipepe/traefik:1.7
-docker push ipepe/traefik:1.7
-docker push ipepe/traefik
+docker buildx build --platform=linux/amd64,linux/arm64 --push --tag ipepe/traefik .
